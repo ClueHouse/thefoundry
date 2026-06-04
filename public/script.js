@@ -22,7 +22,7 @@ doors.forEach((door) => {
     door.classList.add("is-selected");
 
     /*
-      Homepage v0.2:
+      Homepage v0.3:
       The eight demo folders do not need to exist yet.
 
       When ready, replace the line below with:
