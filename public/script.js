@@ -1,6 +1,20 @@
 const doors = document.querySelectorAll(".door");
 
+const demoPaths = {
+  "The Artisan": "./demos/artisan/",
+  "The Concierge": "./demos/concierge/",
+  "The Explorer": "./demos/explorer/",
+  "The Gallery": "./demos/gallery/",
+  "The Journal": "./demos/journal/",
+  "The Modernist": "./demos/modernist/",
+  "The Showroom": "./demos/showroom/",
+  "The Storyteller": "./demos/storyteller/"
+};
+
 doors.forEach((door) => {
+  const doorName = door.dataset.door;
+  door.setAttribute("aria-label", `Explore ${doorName}`);
+
   door.addEventListener("click", (event) => {
     event.preventDefault();
 
@@ -8,18 +22,13 @@ doors.forEach((door) => {
     door.classList.add("is-selected");
 
     /*
-      Temporary homepage v0.1 behaviour.
+      Homepage v0.2:
+      The eight demo folders do not need to exist yet.
 
-      Later, replace each href="#" with:
-
-      ./demos/artisan/
-      ./demos/concierge/
-      ./demos/explorer/
-      ./demos/gallery/
-      ./demos/journal/
-      ./demos/modernist/
-      ./demos/showroom/
-      ./demos/storyteller/
+      When ready, replace the line below with:
+      window.location.href = demoPaths[doorName];
     */
+
+    console.log(`Selected: ${doorName}`);
   });
 });
