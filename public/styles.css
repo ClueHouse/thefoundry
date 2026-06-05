@@ -178,7 +178,7 @@ h1 {
 }
 
 .steps-note {
-  width: min(780px, 94%);
+  width: min(980px, 94%);
   margin: 0 auto;
   padding: clamp(0.65rem, 1.35vh, 1rem) clamp(0.85rem, 2vw, 1.4rem);
   background:
