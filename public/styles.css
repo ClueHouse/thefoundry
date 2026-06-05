@@ -20,10 +20,9 @@ body {
 
 body {
   margin: 0;
-
   font-family: Georgia, "Times New Roman", serif;
   color: var(--ink);
-  overflow: hidden;
+  overflow: auto;
   background:
     linear-gradient(rgba(22, 11, 6, 0.04), rgba(22, 11, 6, 0.04)),
     url("./assets/images/homepage/background.png") center center / 100vw auto no-repeat;
