@@ -10,8 +10,6 @@
   --soft: #7c624a;
   --gold: #b8833d;
   --gold-deep: #875c28;
-  --paper: #f2e8d8;
-  --paper-warm: #ead8bd;
 }
 
 html,
@@ -26,7 +24,7 @@ body {
   color: var(--ink);
   overflow: hidden;
   background:
-    linear-gradient(rgba(22, 11, 6, 0.16), rgba(22, 11, 6, 0.16)),
+    linear-gradient(rgba(22, 11, 6, 0.04), rgba(22, 11, 6, 0.04)),
     url("./assets/images/homepage/background.png") center center / cover no-repeat;
 }
 
@@ -36,8 +34,8 @@ body::after {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 46%, rgba(255, 229, 188, 0.08), transparent 30%),
-    radial-gradient(circle at 50% 55%, transparent 42%, rgba(20, 9, 5, 0.34) 100%);
+    radial-gradient(circle at 50% 48%, rgba(255, 244, 222, 0.04), transparent 34%),
+    radial-gradient(circle at 50% 55%, transparent 58%, rgba(20, 9, 5, 0.12) 100%);
 }
 
 .foundry-page {
@@ -59,41 +57,6 @@ body::after {
   padding: clamp(1.45rem, 3vw, 3.25rem) clamp(1.2rem, 4.6vw, 5.25rem);
   text-align: center;
   transform: rotate(-0.12deg);
-
-  background:
-    radial-gradient(circle at 50% 12%, rgba(255,255,255,0.9), transparent 34%),
-    linear-gradient(145deg, rgba(255, 251, 243, 0.96), rgba(240, 226, 204, 0.96) 58%, rgba(224, 205, 176, 0.96));
-
-  border: 1px solid rgba(116, 82, 44, 0.26);
-  border-radius: 0.28rem;
-
-  box-shadow:
-    0 42px 75px rgba(19, 9, 4, 0.44),
-    0 18px 24px rgba(19, 9, 4, 0.26),
-    -8px 12px 22px rgba(19, 9, 4, 0.14),
-    inset 0 1px 0 rgba(255, 255, 255, 0.78),
-    inset 0 -1px 0 rgba(112, 78, 39, 0.14);
-}
-
-.letter-sheet::before {
-  content: "";
-  position: absolute;
-  inset: 0.7rem;
-  border: 1px solid rgba(111, 76, 39, 0.13);
-  pointer-events: none;
-}
-
-.letter-sheet::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.38;
-  mix-blend-mode: multiply;
-  background-image:
-    radial-gradient(rgba(87, 58, 29, 0.14) 0.65px, transparent 0.7px),
-    linear-gradient(90deg, rgba(255,255,255,0.22), transparent 22%, transparent 78%, rgba(84,52,23,0.08));
-  background-size: 7px 7px, 100% 100%;
 }
 
 .brand,
@@ -310,10 +273,6 @@ h1 {
 @media (max-width: 480px) {
   .letter-sheet {
     padding: 1rem;
-  }
-
-  .letter-sheet::before {
-    inset: 0.45rem;
   }
 
   h1 {
