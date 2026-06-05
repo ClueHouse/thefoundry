@@ -49,7 +49,7 @@ body::after {
 
 .letter-sheet {
   position: relative;
-  width: min(1170px, 82vw);
+  width: min(1550px, 94vw);
   min-height: min(760px, 85vh);
   display: grid;
   grid-template-rows: auto auto 1fr auto auto;
