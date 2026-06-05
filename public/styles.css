@@ -50,11 +50,11 @@ body::after {
 .letter-sheet {
   position: relative;
   width: min(1200px, 72vw);
-  min-height: min(700px, 78vh);
+  min-height: min(860px, 88vh);
   display: grid;
   grid-template-rows: auto auto auto auto auto;
   align-content: center;
-  gap: clamp(0.5rem, 1.05vh, 0.9rem);
+  gap: clamp(0.95rem, 2vh, 1.6rem);
   padding: clamp(1rem, 2vw, 2.2rem) clamp(1rem, 3.2vw, 3.4rem);
   text-align: center;
 }
@@ -86,7 +86,7 @@ body::after {
 }
 
 .brand-kicker {
-  margin: 0 0 clamp(0.35rem, 0.85vh, 0.55rem);
+  margin: 0 0 clamp(0.75rem, 1.8vh, 1.2rem);
   font-family: Arial, sans-serif;
   font-size: clamp(0.62rem, 0.78vw, 0.74rem);
   letter-spacing: 0.4em;
