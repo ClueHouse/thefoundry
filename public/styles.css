@@ -20,6 +20,12 @@ body {
 
 body {
   margin: 0;
+
+
+  border: 20px solid red;
+
+
+  
   font-family: Georgia, "Times New Roman", serif;
   color: var(--ink);
   overflow: hidden;
