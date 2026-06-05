@@ -34,8 +34,8 @@ body::after {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 48%, rgba(255, 244, 222, 0.035), transparent 36%),
-    radial-gradient(circle at 50% 55%, transparent 62%, rgba(20, 9, 5, 0.08) 100%);
+    radial-gradient(circle at 50% 48%, rgba(255, 244, 222, 0.025), transparent 36%),
+    radial-gradient(circle at 50% 55%, transparent 62%, rgba(20, 9, 5, 0.06) 100%);
 }
 
 .foundry-page {
@@ -49,13 +49,13 @@ body::after {
 
 .letter-sheet {
   position: relative;
-  width: min(1320px, 82vw);
-  min-height: min(760px, 82vh);
+  width: min(1200px, 72vw);
+  min-height: min(700px, 78vh);
   display: grid;
   grid-template-rows: auto auto auto auto auto;
   align-content: center;
-  gap: clamp(0.65rem, 1.35vh, 1.1rem);
-  padding: clamp(1.35rem, 2.4vw, 2.7rem) clamp(1.2rem, 4vw, 4.4rem);
+  gap: clamp(0.5rem, 1.05vh, 0.9rem);
+  padding: clamp(1rem, 2vw, 2.2rem) clamp(1rem, 3.2vw, 3.4rem);
   text-align: center;
 }
 
@@ -68,76 +68,99 @@ body::after {
   z-index: 2;
 }
 
+.brand {
+  position: relative;
+}
+
+.brand::after {
+  content: "♡";
+  position: absolute;
+  top: 0.2rem;
+  right: clamp(6.5rem, 8vw, 10rem);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 2.4vw, 2.7rem);
+  line-height: 1;
+  color: var(--gold);
+  font-weight: 400;
+  transform: rotate(-8deg);
+}
+
 .brand-kicker {
-  margin: 0 0 clamp(0.35rem, 1vh, 0.65rem);
+  margin: 0 0 clamp(0.35rem, 0.85vh, 0.55rem);
   font-family: Arial, sans-serif;
-  font-size: clamp(0.64rem, 0.88vw, 0.8rem);
-  letter-spacing: 0.42em;
+  font-size: clamp(0.62rem, 0.78vw, 0.74rem);
+  letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--gold-deep);
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(4.35rem, 6.2vw, 7.1rem);
-  line-height: 0.88;
+  font-size: clamp(3.3rem, 4.65vw, 5.4rem);
+  line-height: 0.93;
   font-weight: 500;
-  letter-spacing: -0.064em;
+  letter-spacing: -0.052em;
 }
 
 .headline-script {
-  margin: clamp(0.35rem, 0.75vh, 0.65rem) 0 0;
-  font-size: clamp(1.55rem, 2.35vw, 2.45rem);
-  font-style: italic;
+  margin: clamp(0.45rem, 0.85vh, 0.7rem) 0 0;
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  font-size: clamp(1.45rem, 2vw, 2.15rem);
+  line-height: 1.05;
+  font-style: normal;
   color: var(--muted);
+  transform: rotate(-1.1deg);
 }
 
 .intro {
-  width: min(670px, 92%);
+  width: min(640px, 86%);
   margin: 0 auto;
-  font-size: clamp(0.88rem, 1.05vw, 1.02rem);
+  font-size: clamp(0.83rem, 0.92vw, 0.96rem);
   line-height: 1.42;
   color: var(--muted);
 }
 
 .intro p {
-  margin: 0.07rem 0;
+  margin: 0.06rem 0;
 }
 
 .choice {
-  width: min(1040px, 92%);
+  width: min(920px, 88%);
   margin: 0 auto;
 }
 
 .choice h2 {
-  margin: 0 0 clamp(0.55rem, 0.95vh, 0.78rem);
-  font-size: clamp(1.02rem, 1.45vw, 1.28rem);
-  font-weight: 500;
-  font-style: italic;
-  color: var(--soft);
+  margin: clamp(0.25rem, 0.75vh, 0.5rem) 0 clamp(0.55rem, 0.9vh, 0.78rem);
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  line-height: 1.05;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--muted);
+  transform: rotate(-0.8deg);
 }
 
 .door-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid rgba(113, 82, 49, 0.16);
-  border-left: 1px solid rgba(113, 82, 49, 0.11);
+  border-top: 1px solid rgba(113, 82, 49, 0.21);
+  border-left: 1px solid rgba(113, 82, 49, 0.17);
 }
 
 .door {
-  min-height: clamp(4.6rem, 9.6vh, 6rem);
+  min-height: clamp(4.15rem, 8.2vh, 5.25rem);
   display: grid;
   place-items: center;
   align-content: center;
-  gap: 0.3rem;
-  padding: 0.55rem 0.4rem;
+  gap: 0.26rem;
+  padding: 0.45rem 0.35rem;
 
   text-align: center;
   text-decoration: none;
   color: var(--ink);
 
-  border-right: 1px solid rgba(113, 82, 49, 0.11);
-  border-bottom: 1px solid rgba(113, 82, 49, 0.16);
+  border-right: 1px solid rgba(113, 82, 49, 0.17);
+  border-bottom: 1px solid rgba(113, 82, 49, 0.21);
 
   background: rgba(255, 255, 255, 0);
   transition:
@@ -151,16 +174,16 @@ h1 {
 .door.is-selected {
   outline: none;
   transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.24);
   box-shadow:
-    inset 0 0 0 1px rgba(182, 134, 67, 0.26),
+    inset 0 0 0 1px rgba(182, 134, 67, 0.28),
     0 8px 18px rgba(90, 58, 26, 0.08);
 }
 
 .door-icon {
-  width: clamp(1.85rem, 2.4vw, 2.3rem);
-  height: clamp(1.85rem, 2.4vw, 2.3rem);
-  color: var(--gold);
+  width: clamp(1.65rem, 2vw, 2.05rem);
+  height: clamp(1.65rem, 2vw, 2.05rem);
+  color: #bd873e;
 }
 
 .door-icon svg {
@@ -169,34 +192,37 @@ h1 {
   display: block;
   fill: none;
   stroke: currentColor;
-  stroke-width: 2.15;
+  stroke-width: 2.05;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .door span:last-child {
-  font-size: clamp(0.82rem, 1vw, 0.98rem);
+  font-size: clamp(0.78rem, 0.9vw, 0.92rem);
 }
 
 .steps-note {
-  width: min(890px, 78%);
+  width: min(760px, 68%);
   margin: 0 auto;
-  padding: clamp(0.7rem, 1.25vh, 0.95rem) clamp(0.9rem, 1.8vw, 1.35rem);
+  padding: clamp(0.58rem, 1vh, 0.82rem) clamp(0.8rem, 1.6vw, 1.2rem);
   background:
-    linear-gradient(180deg, rgba(224, 198, 160, 0.62), rgba(205, 174, 130, 0.5));
-  border: 1px solid rgba(128, 89, 46, 0.12);
+    linear-gradient(180deg, rgba(224, 198, 160, 0.58), rgba(205, 174, 130, 0.44));
+  border: 1px solid rgba(128, 89, 46, 0.1);
   box-shadow:
-    0 14px 26px rgba(69, 42, 18, 0.13),
-    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    0 12px 22px rgba(69, 42, 18, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   transform: rotate(0.12deg);
 }
 
 .steps-note h2 {
-  margin: 0 0 0.42rem;
-  font-size: clamp(0.95rem, 1.3vw, 1.08rem);
-  font-weight: 500;
-  font-style: italic;
-  color: var(--soft);
+  margin: 0 0 0.36rem;
+  font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+  line-height: 1.05;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--muted);
+  transform: rotate(-0.6deg);
 }
 
 .steps-note ol {
@@ -208,12 +234,12 @@ h1 {
 }
 
 .steps-note li {
-  min-height: 2.75rem;
-  padding: 0.2rem 0.42rem;
+  min-height: 2.45rem;
+  padding: 0.18rem 0.36rem;
   display: grid;
   align-content: start;
-  gap: 0.1rem;
-  border-left: 1px solid rgba(117, 79, 39, 0.14);
+  gap: 0.08rem;
+  border-left: 1px solid rgba(117, 79, 39, 0.13);
 }
 
 .steps-note li:first-child {
@@ -222,19 +248,19 @@ h1 {
 
 .steps-note strong {
   font-weight: 500;
-  font-size: clamp(0.84rem, 1vw, 0.96rem);
+  font-size: clamp(0.78rem, 0.88vw, 0.9rem);
   color: var(--gold-deep);
 }
 
 .steps-note span {
-  font-size: clamp(0.66rem, 0.82vw, 0.74rem);
-  line-height: 1.18;
+  font-size: clamp(0.61rem, 0.72vw, 0.68rem);
+  line-height: 1.16;
   color: var(--ink);
 }
 
 .footer-line p {
   margin: 0;
-  font-size: clamp(0.78rem, 1vw, 0.94rem);
+  font-size: clamp(0.72rem, 0.9vw, 0.86rem);
   color: var(--muted);
 }
 
@@ -252,6 +278,10 @@ h1 {
     width: min(720px, 94vw);
     min-height: calc(100svh - 1.4rem);
     grid-template-rows: auto;
+  }
+
+  .brand::after {
+    right: 1rem;
   }
 
   .door-grid {
