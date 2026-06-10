@@ -1,6 +1,6 @@
-const navLinks = document.querySelectorAll('a[href^="#"]');
+const internalLinks = document.querySelectorAll('a[href^="#"]');
 
-navLinks.forEach((link) => {
+internalLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     const targetId = link.getAttribute("href");
 
