@@ -1,34 +1,20 @@
-const doors = document.querySelectorAll(".door");
+const navLinks = document.querySelectorAll('a[href^="#"]');
 
-const demoPaths = {
-  "The Artisan": "./demos/artisan/",
-  "The Concierge": "./demos/concierge/",
-  "The Explorer": "./demos/explorer/",
-  "The Gallery": "./demos/gallery/",
-  "The Journal": "./demos/journal/",
-  "The Modernist": "./demos/modernist/",
-  "The Showroom": "./demos/showroom/",
-  "The Storyteller": "./demos/storyteller/"
-};
+navLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href");
 
-doors.forEach((door) => {
-  const doorName = door.dataset.door;
-  door.setAttribute("aria-label", `Explore ${doorName}`);
+    if (!targetId || targetId === "#") return;
 
-  door.addEventListener("click", (event) => {
+    const target = document.querySelector(targetId);
+
+    if (!target) return;
+
     event.preventDefault();
 
-    doors.forEach((item) => item.classList.remove("is-selected"));
-    door.classList.add("is-selected");
-
-    /*
-      Homepage v0.3:
-      The eight demo folders do not need to exist yet.
-
-      When ready, replace the line below with:
-      window.location.href = demoPaths[doorName];
-    */
-
-    console.log(`Selected: ${doorName}`);
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   });
 });
